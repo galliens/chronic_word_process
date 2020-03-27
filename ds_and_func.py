@@ -6,6 +6,7 @@ chaos = []
 
 
 # Time
+# 用来指示时间，读取文本时候会判断时间，然后把文本装进对应时间的数据结构里
 class Time:
     zone = 0
     year = -10000
@@ -50,6 +51,7 @@ class Time:
 
 
 # Year
+# 表示年的类，可以用来装某年对应的文本
 # 类属性
 # Year.years 字典，年份-对象 int-<class Year>
 # 实例属性
@@ -65,7 +67,7 @@ class Time:
 # Year.get_monthlist_ordered(year)      返回某年的已有月份列表
 # Year.check_month_in_year(year,month)  检查某年是否有某月
 # Year.newmonth(year,month)             在某年中创建某月的Month实例
-# Year.get_month(year.month)            得到某年的某月的Month实例
+# Year.get_month(year,month)            得到某年的某月的Month实例
 class Year:
     # 所有year的字典，key-value是年份-对象 int-<class Year>
     years = {}
@@ -130,6 +132,7 @@ class Year:
 
 
 # Month 
+# 表示月的类，可以用来装某年某月对应的文本
 # 实例属性
 # self.month = int        记录月份
 # self.content = list     记录内容
@@ -171,6 +174,7 @@ class Month:
 
 
 # Day
+# 表示日的类，可以用来装某年某月某日对应的文本
 # 实例属性
 # self.day = int        记录日子
 # self.content = list   记录内容
